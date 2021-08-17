@@ -26,17 +26,18 @@ function greeting(name, gender, isSelf) {
   var pronoun = "";
   switch (gender){
       case 'male':
-        firstword=greetingWords[0].substring(0,1).toUpperCase()+greetingWords[0].substring(1).toLowerCase();
+        firstword=greetingWords[0];
         pronoun=prefixes[1];
         break;
         case 'female':
-        firstword=greetingWords[1].substring(0,1).toUpperCase()+greetingWords[1].substring(1).toLowerCase();
+        firstword=greetingWords[1];
         pronoun=prefixes[2];
          break;
         default:
-        firstword=greetingWords[2].substring(0,1).toUpperCase()+greetingWords[2].substring(1).toLowerCase();
+        firstword=greetingWords[2];
         pronoun=prefixes[3];
   }
+  firstword=firstword.substring(0,1).toUpperCase()+firstword.substring(1).toLowerCase();
   if (isSelf == true) pronoun=prefixes[0];
   return `${firstword} ${pronoun} name is ${name}`;
 }
