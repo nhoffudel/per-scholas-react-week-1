@@ -11,3 +11,8 @@ console.log("My info printed as an object");
 console.log(myinfo);
 console.log("my info printed as a string");
 console.log(JSON.stringify(myinfo));
+
+function sayhi(name, age){
+    return `my name is: ${name} and my age is ${age}`;
+}
+console.log(sayhi("Nick", 25));
